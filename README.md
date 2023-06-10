@@ -10,7 +10,7 @@ This model serves as a powerful tool in situations when a power outage has occur
 
 The performance index used to measure the success of the models presented below is accuracy:
 
-![Accuracy Formula](/assets/AccuracyEquation.JPG)
+![Accuracy Formula](/assets/AccuracyEquation.png)
 
 The data used for training was 608 observations long after removing rows that were missing values in any of the feature or response columns. The test data was 152 observations. The start of the training data can be seen here before it is transformed for fitting can be seen here:
 
