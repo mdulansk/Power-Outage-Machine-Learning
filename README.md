@@ -32,7 +32,6 @@ The start of the training data can be seen here before it is transformed for fit
     <body><table class="dataframe">
         <thead>
             <tr style="text-align: right;">
-            <th></th>
             <th>MONTH</th>
             <th>CLIMATE.REGION</th>
             <th>PC.REALGSP.STATE</th>
@@ -80,7 +79,6 @@ The Format of the Variable can then be seen here:
     <html><body><table class="dataframe">
         <thead>
             <tr style="text-align: right;">
-            <th></th>
             <th>CAUSE.CATEGORY.DETAIL</th>
             </tr>
             </thead>
