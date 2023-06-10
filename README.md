@@ -8,6 +8,8 @@ The Exploratory Data analysis for this project can be found here:
 
 This model serves as a powerful tool in situations when a power outage has occurred, causing widespread impact, yet the source remains unidentified. It utilizes crucial variables such as the affected US region, the scale of the outage as indicated by the number of customers affected, the state's economic vitality, and the month of occurrence. With these inputs, our model is trained to predict the root cause of the outage, providing invaluable information for decision-making and timely response.
 
+This is a multiclass prediction problem. The column to be predicted is CAUSE.CATEGORY.DETAIL, which lists the specific cause of a given power outage. 
+
 The performance index used to measure the success of the models presented below is accuracy:
 
 ![Accuracy Formula](/assets/AccuracyEquation.png)
