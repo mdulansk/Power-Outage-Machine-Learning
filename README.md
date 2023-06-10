@@ -120,7 +120,7 @@ In order to format these features to be setup for the KNEighborsClassifier only 
 After training the baseline model on the training data, it was 40.8% accurate at predicting the testing split. This is not a very strongly performing model, it is better than random but is not very accurate at all. The following heatmap of the confusion matrix for this model can be seen here. It should be noted that the confusion matrix heatmap only includes the causes that were in the testing data set, so it contains less than 25 causes. 
 
 <div style="display: flex; justify-content: center;">
-    <iframe src="assets/Baseline_Heatmap.html" width=1000 height=400 frameBorder=0></iframe>
+    <iframe src="assets/Baseline_Heatmap.html" width=800 height=600 frameBorder=0></iframe>
 </div>
 
 The diagonal blocks on this heatmap are the occurrences where the model predicted the correct cause. It can be seen that the diagonal part of the heatmap is sparsly populated, but contains the darkest blocks. The model often predicts the same two causes repeatedly, but they are some of the most common causes so it performs decently accurately. There are a decent amount of mislabeled causes,  due to the lack of sufficient training data. Given new test data this model would perform best if the actual cause of the power outage from the new data is either a thunderstorm or vandalism. Though this response variable would not be known for the future unseen data. The realistic way to better improve this model would be to give it more training data to learn from and make better predictions off of.
@@ -152,7 +152,7 @@ A KNearestNeighbor classifier was used as the final predictive classifier model.
 Compared to the baseline KNearestNeighbors model this model peformed at 55% accuracy on the testing split, a 15% increase in performance. This can largely be attributed for the transformation of the CUSTOMERS.AFFECTED column as well as the optimization of the hyperparameters in the creation of this model. The following heatmap of the confusion matrix for this model can be seen here.
 
 <div style="display: flex; justify-content: center;">
-    <iframe src="assets/heatmap.html" width=1000 height=400 frameBorder=0></iframe>
+    <iframe src="assets/heatmap.html" width=800 height=600 frameBorder=0></iframe>
 </div>
 
 This heatmap can be directly compared with the heatmap of the baseline model. It can be seen that there are two more diagonal blocks that have high frequency. This shows that after adding new features and optimizing the hyperparameters the KNearestNeighbor classifier was effective at classifying thunderstorms, vandalism, hurricanes and winter storms. 
@@ -180,7 +180,7 @@ Relevant Columns: This test was performed with the test data that was originally
 Process: The W or E column, which corresponds to the West or East mapping of the power outages was shuffled 10,000 times. Each shuffle the absolute difference of accuracy between the East and West groups was calculated to form the test statistic distribution.
 
 <div style="display: flex; justify-content: center;">
-    <iframe src="assets/perm_plot.html" width=1000 height=600 frameBorder=0></iframe>
+    <iframe src="assets/perm_plot.html" width=1100 height=600 frameBorder=0></iframe>
 </div>
 
 P-value: 0.27
