@@ -131,7 +131,13 @@ The final model was chosen after optimizing the hyperparameters for two differen
 
 ## Feature Engineering
 
-From the original features used in training the original KNearestNeighbors, most were transformed. First, the CUSTOMERS.AFFECTED column was broken into 5 quantiles. This is because the CUSTOMERS.AFFECTED column is a good measurement of the impact of the power outage. Given there are a discrete number of causes possible for a power outage, a feature that is able to capture the relative category of impact is useful in breaking down the data into more categorical chunks. The second feature that was engineered was the PC.REALGSP.STATE column. This was scaled using StandardScaler in order to standardize this column. This was done to help the convergence speed of the KNeighborsClassifier, as well as make the weights of the features more balanced. 
+The original features used to train the KNearestNeighbors model underwent significant transformations to optimize the prediction accuracy. Among these, two noteworthy modifications are the transformation of 'CUSTOMERS.AFFECTED' and 'PC.REALGSP.STATE' columns.
+
+The 'CUSTOMERS.AFFECTED' column, which measures the impact of a power outage, was segmented into five quantiles. This is a useful technique because it effectively captures the relative impact categories of different outages. When predicting the cause of a power outage, understanding the severity of the impact can provide valuable context. For example, a large-scale outage might suggest a different cause than a smaller, localized disruption. Breaking the data into these quantiles transforms a continuous variable into a categorical one, providing a clearer delineation of impact levels that can help improve the model's predictive accuracy.
+
+Next, the 'PC.REALGSP.STATE' column was standardized using the StandardScaler method. This approach rescales the data to have a mean of zero and a standard deviation of one, ensuring all features contribute equally to the final prediction. This is particularly useful in the KNeighborsClassifier model as it relies on calculating the distance between instances, and variables measured at different scales can distort these distances. By standardizing the data, we're making sure that all features are equally weighted, reducing bias and potentially improving model performance.
+
+In summary, these feature engineering steps are beneficial for predicting power outage causes because they allow us to effectively categorize the impact level of different outages and ensure all features are evaluated on a standard scale. This helps the model capture patterns and relationships more accurately, thus improving our predictions.
 
 ## Algorithm. 
 
@@ -167,7 +173,7 @@ Alternate Hypothesis: The accuracy of the prediction from the KNearestNeighbor c
 
 Significant Level: 0.05. Type I error is not consequential. Scientific standard level of significance. 
 
-Test Statistic: Absoulte difference of accuracy between the East and the West. This is an effective statistic because it compares the central tendency of the two distributions, which is the main concern for the question.
+Test Statistic: Absoulte difference of accuracy between the East and the West prediction from the final model. This is an effective statistic because it compares the central tendency of the two distributions, which is the main concern for the question.
 
 Relevant Columns: This test was performed with the test data that was originally split off when the training and test data was created. The columns relevant in this analysis are all of the feature columns, and especially the CLIMATE.REGION column because it determines the group East or West for the power outage observation.
 
