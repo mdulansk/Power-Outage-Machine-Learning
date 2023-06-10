@@ -1,0 +1,5 @@
+remote_theme: pages-themes/hacker@v0.2.0
+plugins:
+- jekyll-remote-theme # add this line to the plugins list if you already have one
+title: [Fault Finder: Predictive Analytics for Power Outage Causes]
+description: [By employing a sophisticated machine learning model we utilize key data points like Gross State Product population affected climate region and the month to decode complex patterns and predict the underlying cause of a power outage]
