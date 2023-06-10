@@ -73,7 +73,7 @@ The start of the training data can be seen here before it is transformed for fit
     </table></body>
 </div>
 
-The Format of the Variable can then be seen here:
+A sample of the response variable can be seen here:
 
 <div style ="width: 480 px; overflow-x: auto;">
     <html><body><table class="dataframe">
