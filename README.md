@@ -117,7 +117,7 @@ In order to format these features to be setup for the KNEighborsClassifier only 
 
 ## Performance
 
-After training the baseline model on the training data, it was 40.8% accurate at predicting the testing split. This is not a very strongly performing model, it is better than random but is not very accurate at all. The following heatmap of the confusion matrix for this model can be seen here.
+After training the baseline model on the training data, it was 40.8% accurate at predicting the testing split. This is not a very strongly performing model, it is better than random but is not very accurate at all. The following heatmap of the confusion matrix for this model can be seen here. It should be noted that the confusion matrix heatmap only includes the causes that were in the testing data set, so it contains less than 25 causes. 
 
 <div style="display: flex; justify-content: center;">
     <iframe src="assets/Baseline_Heatmap.html" width=1000 height=400 frameBorder=0></iframe>
