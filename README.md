@@ -41,35 +41,30 @@ The start of the training data can be seen here before it is transformed for fit
             </thead>
             <tbody>
             <tr>
-            <th>2</th>
             <td>10.0</td>
             <td>East North Central</td>
             <td>50447</td>
             <td>70000.0</td>
             </tr>
             <tr>
-            <th>3</th>
             <td>6.0</td>
             <td>East North Central</td>
             <td>51598</td>
             <td>68200.0</td>
             </tr>
             <tr>
-            <th>5</th>
             <td>11.0</td>
             <td>East North Central</td>
             <td>50447</td>
             <td>60000.0</td>
             </tr>
             <tr>
-            <th>6</th>
             <td>7.0</td>
             <td>East North Central</td>
             <td>50447</td>
             <td>63000.0</td>
             </tr>
             <tr>
-            <th>7</th>
             <td>6.0</td>
             <td>East North Central</td>
             <td>52445</td>
@@ -91,23 +86,18 @@ The Format of the Variable can then be seen here:
             </thead>
             <tbody>
             <tr>
-            <th>2</th>
             <td>heavy wind</td>
             </tr>
             <tr>
-            <th>3</th>
             <td>thunderstorm</td>
             </tr>
             <tr>
-            <th>5</th>
             <td>winter storm</td>
             </tr>
             <tr>
-            <th>6</th>
             <td>tornadoes</td>
             </tr>
             <tr>
-            <th>7</th>
             <td>thunderstorm</td>
             </tr>
         </tbody>
