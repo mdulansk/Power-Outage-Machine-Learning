@@ -10,9 +10,7 @@ This model serves as a powerful tool in situations when a power outage has occur
 
 The performance index used to measure the success of the models presented below is accuracy:
 
-$$
-\text{Accuracy} = \frac{\text{Number of correct predictions}}{\text{Total number of predictions}}
-$$
+![Accuracy Formula](Power-Outage-Cause-Prediction\assets\AccuracyEquation.JPG)
 
 The data used for training was 608 observations long after removing rows that were missing values in any of the feature or response columns. The test data was 152 observations. The start of the training data can be seen here before it is transformed for fitting can be seen here:
 
@@ -117,7 +115,13 @@ In order to format these features to be setup for the KNEighborsClassifier only 
 
 ## Performance
 
-After training the baseline model on the training data, it was 40.8% accurate at predicting the testing split. This is not a very strongly performing model, it is better than random but is not very accurate at all.
+After training the baseline model on the training data, it was 40.8% accurate at predicting the testing split. This is not a very strongly performing model, it is better than random but is not very accurate at all. The following heatmap of the confusion matrix for this model can be seen here.
+
+<div style="display: flex; justify-content: center;">
+    <iframe src="assets/Baseline_Heatmap.html" width=1000 height=400 frameBorder=0></iframe>
+</div>
+
+The diagonal blocks on this heatmap are the occurrences where the model predicted the correct cause. It can be seen that the diagonal part of the heatmap is sparsly populated, but contains the darkest blocks. The model often predicts the same two causes repeatedly, but they are some of the most common causes so it performs decently accurately. There are a decent amount of mislabeled causes,  due to the lack of sufficient training data. Given new test data this model would perform best if the actual cause of the power outage from the new data is either a thunderstorm or vandalism. Though this response variable would not be known for the future unseen data. The realistic way to better improve this model would be to give it more training data to learn from and make better predictions off of.
 
 # Final Model
 
@@ -143,7 +147,7 @@ Compared to the baseline KNearestNeighbors model this model peformed at 55% accu
     <iframe src="assets/heatmap.html" width=1000 height=400 frameBorder=0></iframe>
 </div>
 
-The diagonal blocks on this heatmap are the occurrences where the model predicted the correct cause. It can be seen that the diagonal part of the heatmap is sparsly populated, but contains the darkest blocks. The model often predicts the same four causes repeatedly, but they are some of the most common causes so it performs decently accurately. There are a decent amount of labeled causes, likely due to the lack of sufficient training data. Given new test data this model would perform best if the actual cause of the power outage from the new data is either a hurricane, thunderstorm, wildfire, or a winter storm. Though this response variable would not be known for the future unseen data. The realistic way to better improve this model would be to give it more training data to learn from and make better predictions off of.
+This heatmap can be directly compared with the heatmap of the baseline model. It can be seen that there are two more diagonal blocks that have high frequency. This shows that after adding new features and optimizing the hyperparameters the KNearestNeighbor classifier was effective at classifying thunderstorms, vandalism, hurricanes and winter storms. 
 
 
 # Fairness Analysis
@@ -153,7 +157,7 @@ The diagonal blocks on this heatmap are the occurrences where the model predicte
  - West: 'Southwest', 'West', 'Northwest', 'West North Central'
  - East: 'Southeast','Northeast','East North Central'
 
- ## Hypothesis Testing
+## Hypothesis Testing
 
 Null Hypothesis: The accuracy of the prediction from the KNearestNeighbor classifier is the same between power outages from the East and the West. 
 
